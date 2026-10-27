@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Barlow Condensed', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+  --color-brand-orange: #ff6b2c;
+  --color-brand-amber: #f97316;
+  --color-brand-dark: #090a0d;
+  --color-brand-surface: #111318;
+  --color-brand-border: #20242e;
+}
+
+/* Base resets & typography */
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+/* Subtle Technical Grid Background */
+.bg-tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 107, 44, 0.05) 0%, rgba(9, 10, 13, 0.95) 70%, #090a0d 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b2c;
+}
+
+/* Glassmorphic Technical Card */
+.glass-panel {
+  background: rgba(17, 19, 24, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 107, 44, 0.3);
+}
+
+/* Technical crosshairs */
+.tech-crosshair::before,
+.tech-crosshair::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tech-crosshair::before {
+  width: 8px;
+  height: 1px;
+}
+
+.tech-crosshair::after {
+  width: 1px;
+  height: 8px;
+}
+
+/* Text balance */
+.text-balance {
+  text-wrap: balance;
+}
